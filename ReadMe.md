@@ -2,6 +2,8 @@
 
 This is a small project which creates Vornoi diagrams based on chunks, and is therefore infinite and consistent. Feel free to pull bits and pieces from it, or the whole thing - but let me know if you found it useful!
 
+![Godot Voronoi](https://user-images.githubusercontent.com/77860571/111716409-5ae7a080-882c-11eb-9fc5-61a823203edf.png)
+
 ## Files
 
 The important files are Main.tscn, Main.gd, and View.gd.
