@@ -1,22 +1,22 @@
 extends Node2D
 
-export var randSeed:int
+@export var randSeed:int
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-func displayPoints(offset:Vector2, points:PoolVector2Array, color:Color = Color(1,1,1,1)):
+func displayPoints(offset:Vector2, points:PackedVector2Array, color:Color = Color(1,1,1,1)):
 	for point in points:
 		var newPointPoly = Polygon2D.new();
 		newPointPoly.position = point + offset;
-		newPointPoly.polygon = PoolVector2Array([Vector2(-2,-2), Vector2(-2,2), Vector2(2,2), Vector2(2,-2)]);
+		newPointPoly.polygon = PackedVector2Array([Vector2(-2,-2), Vector2(-2,2), Vector2(2,2), Vector2(2,-2)]);
 		newPointPoly.color = color;
 		add_child(newPointPoly)
 	pass
 
-func displayPolygon(offset:Vector2, polygon:PoolVector2Array):
+func displayPolygon(offset:Vector2, polygon:PackedVector2Array):
 	var newPoly = Polygon2D.new();
-	var newPolyPoints = PoolVector2Array();
+	var newPolyPoints = PackedVector2Array();
 	for point in polygon:
 		newPolyPoints.append(point + offset);
 	newPoly.polygon = newPolyPoints;
